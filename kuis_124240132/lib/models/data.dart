@@ -1,3 +1,21 @@
+// Kelas User merepresentasikan data akun pengguna yang dipakai untuk login.
+// Data ini berisi username, password, dan nama lengkap user.
+class User {
+  String username;
+  String password;
+  String nama;
+
+  User({required this.username, required this.password, required this.nama});
+}
+
+// Objek user1 digunakan sebagai data valid untuk proses autentikasi.
+// Ketika user memasukkan username dan password yang sesuai, maka login akan berhasil.
+User user1 = User(
+  username: 'Gita',
+  password: '124240132',
+  nama: 'Gita',
+);
+
 class Car {
   final int id;
   final String name;
@@ -6,7 +24,7 @@ class Car {
   final int price;
   final String description;
   final String imageUrl;
-   Car({
+  Car({
     required this.id,
     required this.name,
     String? imageUrl,
@@ -16,8 +34,20 @@ class Car {
     required this.price,
     required this.description,
   }) : imageUrl = imageUrl ?? image ?? '';
-  
-} 
+}
+
+class Avatar {
+  final int id;
+  final String color;
+  Avatar({required this.id, required this.color});
+}
+
+final List<Avatar> avatar = [
+  Avatar(id: 1, color: 'red'), //colors.(avatar[index].color)
+  Avatar(id: 2, color: 'green'),
+  Avatar(id: 2, color: 'blue'),
+  Avatar(id: 2, color: 'purple'),
+];
 
 final List<Car> cars = [
   Car(
